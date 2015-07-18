@@ -15,7 +15,7 @@
 //
 
 #import "EVENTSViewController.h"
-#import <Parse/Parse.h>
+
 
 @interface EVENTSViewController ()
 
