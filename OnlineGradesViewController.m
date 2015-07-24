@@ -34,7 +34,7 @@
     _activityIndicator.startAnimating;
     
     //Tracking How many users use the Online Grades Option
-    [PFAnalytics trackEvent:@"Online Grades View Opened"];
+
     
     
 }
