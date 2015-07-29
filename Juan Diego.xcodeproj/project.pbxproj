@@ -15,9 +15,9 @@
 		900CEFB61B27D89F00F5F5E1 /* Juan_DiegoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 900CEFB51B27D89F00F5F5E1 /* Juan_DiegoTests.m */; };
 		901426521B3B8CFA007B5339 /* popOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 901426511B3B8CFA007B5339 /* popOverViewController.m */; };
 		901426581B3B8E2E007B5339 /* StreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 901426571B3B8E2E007B5339 /* StreamViewController.m */; };
-		9037452B1B518D8F00C072D8 /* Main.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9037452A1B518D8F00C072D8 /* Main.Storyboard */; };
 		90543A3D1B59BC2100221986 /* fb_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 90543A3C1B59BC2100221986 /* fb_icon.png */; };
 		90543A3F1B59BC2800221986 /* Twitter_logo_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 90543A3E1B59BC2800221986 /* Twitter_logo_blue.png */; };
+		9061D60C1B6222CD00886405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9061D60B1B6222CD00886405 /* Main.storyboard */; };
 		90773B6A1B4525FD0017A770 /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 90773B691B4525FD0017A770 /* Day.m */; };
 		907F52D81B4520E80003D84C /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F52D71B4520E80003D84C /* SocialViewController.m */; };
 		907F52E01B4523100003D84C /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F52DF1B4523100003D84C /* HomepageViewController.m */; };
@@ -62,9 +62,9 @@
 		901426511B3B8CFA007B5339 /* popOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popOverViewController.m; sourceTree = SOURCE_ROOT; };
 		901426541B3B8DFE007B5339 /* StreamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreamViewController.h; sourceTree = "<group>"; };
 		901426571B3B8E2E007B5339 /* StreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StreamViewController.m; path = "Juan Diego.xcodeproj/../StreamViewController.m"; sourceTree = SOURCE_ROOT; };
-		9037452A1B518D8F00C072D8 /* Main.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.Storyboard; sourceTree = "<group>"; };
 		90543A3C1B59BC2100221986 /* fb_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fb_icon.png; path = Images.xcassets/fb_icon.png; sourceTree = "<group>"; };
 		90543A3E1B59BC2800221986 /* Twitter_logo_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter_logo_blue.png; path = Images.xcassets/Twitter_logo_blue.png; sourceTree = "<group>"; };
+		9061D60B1B6222CD00886405 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		90773B691B4525FD0017A770 /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Day.m; path = "Juan Diego.xcodeproj/../Day.m"; sourceTree = SOURCE_ROOT; };
 		90773B6B1B45279F0017A770 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		907F52D71B4520E80003D84C /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialViewController.m; path = "Juan Diego.xcodeproj/../SocialViewController.m"; sourceTree = SOURCE_ROOT; };
@@ -133,9 +133,9 @@
 		900CEF921B27D89F00F5F5E1 /* Juan Diego */ = {
 			isa = PBXGroup;
 			children = (
+				9061D60B1B6222CD00886405 /* Main.storyboard */,
 				900CEF971B27D89F00F5F5E1 /* AppDelegate.h */,
 				900CEF981B27D89F00F5F5E1 /* AppDelegate.m */,
-				9037452A1B518D8F00C072D8 /* Main.Storyboard */,
 				90D004D01B3B8C6800E64F93 /* popOverViewController.h */,
 				901426511B3B8CFA007B5339 /* popOverViewController.m */,
 				90C0A45B1B452E8B00F8C963 /* Events */,
@@ -346,13 +346,13 @@
 				90543A3F1B59BC2800221986 /* Twitter_logo_blue.png in Resources */,
 				90543A3D1B59BC2100221986 /* fb_icon.png in Resources */,
 				90C0A4521B45287000F8C963 /* GoogleCalenderReader-Info.plist in Resources */,
+				9061D60C1B6222CD00886405 /* Main.storyboard in Resources */,
 				900CEFAA1B27D89F00F5F5E1 /* LaunchScreen.xib in Resources */,
 				90F84E3F1B42905D00BA2851 /* Grades2.png in Resources */,
 				90F84E411B42936500BA2851 /* rss.png in Resources */,
 				900CEFA71B27D89F00F5F5E1 /* Images.xcassets in Resources */,
 				90F84E471B42962D00BA2851 /* JDTV.png in Resources */,
 				90FA7B351B428C6C0015AEB7 /* splashScreen.png in Resources */,
-				9037452B1B518D8F00C072D8 /* Main.Storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

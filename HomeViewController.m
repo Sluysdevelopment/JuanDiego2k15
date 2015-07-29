@@ -11,7 +11,7 @@
 #import <Parse/Parse.h>
 #import <MapKit/MapKit.h>
 #import "Day.h"
-#import "Reachability.h"
+
 
 @interface HomeViewController ()
 @end
@@ -66,12 +66,10 @@
     
     //Refresh Items
     
-    [self dayChecker];
-    [self preferredStatusBarStyle];
+        [self preferredStatusBarStyle];
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    [self reloadTableview];
-    [self startActivityIndicator:nil];
-    [self checkBreaks];
+       [self startActivityIndicator:nil];
+    
     [getToday loadAllData];
     [self performSelector:@selector(stopActivityIndicator:) withObject:nil afterDelay: 0.9];
     
@@ -93,76 +91,11 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     
-    [self checkBreaks];
+   
     
-    internetReach = [Reachability reachabilityForInternetConnection];
-    [internetReach startNotifier];
     
-    NetworkStatus netStatus = [internetReach currentReachabilityStatus];
-    
-    switch (netStatus){
-        case ReachableViaWWAN:{
-            
-            [_activityView startAnimating];
-            
-            [self reloadTableview];
-            
-            [self checkBreaks];
-            
-            [self performSelector:@selector(stopActivityIndicator:) withObject:nil afterDelay: 0.5];
-            
-            break;
-        }
-        case ReachableViaWiFi:{
-            
-            [_activityView startAnimating];
-            
-            [self reloadTableview];
-            
-            [self checkBreaks];
-            
-            [self performSelector:@selector(stopActivityIndicator:) withObject:nil afterDelay: 0.5];
-            
-            break;
-        }
-        case NotReachable:{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please connect to a WIFI network before starting. Functionality of this application will be limited." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-            [alert show];
-            break;
-        }
-    }
-    
-}
 
-- (void) checkBreaks {
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Miscellaneous"];      //Create Query
-    
-    [query addDescendingOrder:@"createdAt"];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        
-        if (!error) {
-            
-            breakArray = objects;
-            
-            NSLog(@"BA: %@", breakArray);
-            
-            PFObject *breakResults = [breakArray objectAtIndex:0];
-            
-            _boolString = [breakResults objectForKey:@"BOOL"];
-            
-            [self checkPlist:nil];
-            
-            
-        }
-    }];
-    
-    
-}
-
-
-- (IBAction)checkPlist:(id)sender{
+{
     
     Day *getToday;
     getToday = [[Day alloc] init];
@@ -199,8 +132,7 @@
         
         _dayLabel.text = [dayDict objectForKey:@"Today"];
         
-        [self dayChecker];
-    }
+           }
     else{
         NSLog(@"Its not Today, its %@", dateToday);
         
@@ -213,7 +145,6 @@
 }
 
 
-- (void) reloadTableview {
     
     //Reload Table and Data
     
